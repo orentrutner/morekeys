@@ -9,9 +9,18 @@
 /* Begin PBXBuildFile section */
 		8073BAA51F09540900BF8C50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAA41F09540900BF8C50 /* AppDelegate.m */; };
 		8073BAA81F09540900BF8C50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAA71F09540900BF8C50 /* main.m */; };
-		8073BAAB1F09540900BF8C50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAAA1F09540900BF8C50 /* ViewController.m */; };
 		8073BAAD1F09540900BF8C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8073BAAC1F09540900BF8C50 /* Assets.xcassets */; };
-		8073BAB01F09540900BF8C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8073BAAE1F09540900BF8C50 /* Main.storyboard */; };
+		8073BAB81F0954A500BF8C50 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8073BAB71F0954A500BF8C50 /* MainMenu.xib */; };
+		8073BAC11F0964E800BF8C50 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BABF1F0964E800BF8C50 /* PreferencesWindowController.m */; };
+		8073BAC21F0964E800BF8C50 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8073BAC01F0964E800BF8C50 /* PreferencesWindow.xib */; };
+		8073BAC71F096B5400BF8C50 /* MatchingDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAC61F096B5400BF8C50 /* MatchingDictionary.m */; };
+		8073BACA1F09CEB900BF8C50 /* MatchingDictionaryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAC91F09CEB900BF8C50 /* MatchingDictionaryList.m */; };
+		8073BACD1F0B5E6200BF8C50 /* KeyboardEventTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BACC1F0B5E6200BF8C50 /* KeyboardEventTap.m */; };
+		8073BAD11F0B623F00BF8C50 /* KeyboardEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAD01F0B623F00BF8C50 /* KeyboardEvent.m */; };
+		8073BAD41F0B62F700BF8C50 /* IOHIDKeyboardEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAD31F0B62F700BF8C50 /* IOHIDKeyboardEvent.m */; };
+		8073BAD71F0B633700BF8C50 /* CGKeyboardEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAD61F0B633700BF8C50 /* CGKeyboardEvent.m */; };
+		8073BADA1F0BE1AE00BF8C50 /* CGKeyboardEventTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAD91F0BE1AE00BF8C50 /* CGKeyboardEventTap.m */; };
+		8073BAE01F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BADF1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,11 +28,31 @@
 		8073BAA31F09540900BF8C50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8073BAA41F09540900BF8C50 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8073BAA71F09540900BF8C50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8073BAA91F09540900BF8C50 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8073BAAA1F09540900BF8C50 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8073BAAC1F09540900BF8C50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8073BAAF1F09540900BF8C50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8073BAB11F09540900BF8C50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8073BAB71F0954A500BF8C50 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		8073BABE1F0964E800BF8C50 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
+		8073BABF1F0964E800BF8C50 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
+		8073BAC01F0964E800BF8C50 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
+		8073BAC51F096B5400BF8C50 /* MatchingDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchingDictionary.h; sourceTree = "<group>"; };
+		8073BAC61F096B5400BF8C50 /* MatchingDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchingDictionary.m; sourceTree = "<group>"; };
+		8073BAC81F09CEB900BF8C50 /* MatchingDictionaryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchingDictionaryList.h; sourceTree = "<group>"; };
+		8073BAC91F09CEB900BF8C50 /* MatchingDictionaryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchingDictionaryList.m; sourceTree = "<group>"; };
+		8073BACB1F0B5E6200BF8C50 /* KeyboardEventTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardEventTap.h; sourceTree = "<group>"; };
+		8073BACC1F0B5E6200BF8C50 /* KeyboardEventTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardEventTap.m; sourceTree = "<group>"; };
+		8073BACE1F0B60D700BF8C50 /* KeyboardEventTapDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardEventTapDelegate.h; sourceTree = "<group>"; };
+		8073BACF1F0B623F00BF8C50 /* KeyboardEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardEvent.h; sourceTree = "<group>"; };
+		8073BAD01F0B623F00BF8C50 /* KeyboardEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardEvent.m; sourceTree = "<group>"; };
+		8073BAD21F0B62F700BF8C50 /* IOHIDKeyboardEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDKeyboardEvent.h; sourceTree = "<group>"; };
+		8073BAD31F0B62F700BF8C50 /* IOHIDKeyboardEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOHIDKeyboardEvent.m; sourceTree = "<group>"; };
+		8073BAD51F0B633700BF8C50 /* CGKeyboardEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGKeyboardEvent.h; sourceTree = "<group>"; };
+		8073BAD61F0B633700BF8C50 /* CGKeyboardEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGKeyboardEvent.m; sourceTree = "<group>"; };
+		8073BAD81F0BE1AE00BF8C50 /* CGKeyboardEventTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGKeyboardEventTap.h; sourceTree = "<group>"; };
+		8073BAD91F0BE1AE00BF8C50 /* CGKeyboardEventTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGKeyboardEventTap.m; sourceTree = "<group>"; };
+		8073BADB1F0BE1F300BF8C50 /* CGKeyboardEventTapDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGKeyboardEventTapDelegate.h; sourceTree = "<group>"; };
+		8073BADE1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDKeyboardEventTap.h; sourceTree = "<group>"; };
+		8073BADF1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOHIDKeyboardEventTap.m; sourceTree = "<group>"; };
+		8073BAE11F0BE7BC00BF8C50 /* IOHIDKeyboardEventTapDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOHIDKeyboardEventTapDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +85,13 @@
 		8073BAA21F09540900BF8C50 /* MoreKeys */ = {
 			isa = PBXGroup;
 			children = (
+				8073BAC41F09690500BF8C50 /* UI */,
+				8073BAC31F0968FA00BF8C50 /* IO */,
 				8073BAA31F09540900BF8C50 /* AppDelegate.h */,
 				8073BAA41F09540900BF8C50 /* AppDelegate.m */,
-				8073BAA91F09540900BF8C50 /* ViewController.h */,
-				8073BAAA1F09540900BF8C50 /* ViewController.m */,
 				8073BAAC1F09540900BF8C50 /* Assets.xcassets */,
-				8073BAAE1F09540900BF8C50 /* Main.storyboard */,
 				8073BAB11F09540900BF8C50 /* Info.plist */,
+				8073BAB71F0954A500BF8C50 /* MainMenu.xib */,
 				8073BAA61F09540900BF8C50 /* Supporting Files */,
 			);
 			path = MoreKeys;
@@ -74,6 +103,42 @@
 				8073BAA71F09540900BF8C50 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8073BAC31F0968FA00BF8C50 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				8073BAD51F0B633700BF8C50 /* CGKeyboardEvent.h */,
+				8073BAD61F0B633700BF8C50 /* CGKeyboardEvent.m */,
+				8073BAD81F0BE1AE00BF8C50 /* CGKeyboardEventTap.h */,
+				8073BAD91F0BE1AE00BF8C50 /* CGKeyboardEventTap.m */,
+				8073BADB1F0BE1F300BF8C50 /* CGKeyboardEventTapDelegate.h */,
+				8073BAD21F0B62F700BF8C50 /* IOHIDKeyboardEvent.h */,
+				8073BAD31F0B62F700BF8C50 /* IOHIDKeyboardEvent.m */,
+				8073BADE1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.h */,
+				8073BADF1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m */,
+				8073BAE11F0BE7BC00BF8C50 /* IOHIDKeyboardEventTapDelegate.h */,
+				8073BACF1F0B623F00BF8C50 /* KeyboardEvent.h */,
+				8073BAD01F0B623F00BF8C50 /* KeyboardEvent.m */,
+				8073BACB1F0B5E6200BF8C50 /* KeyboardEventTap.h */,
+				8073BACC1F0B5E6200BF8C50 /* KeyboardEventTap.m */,
+				8073BACE1F0B60D700BF8C50 /* KeyboardEventTapDelegate.h */,
+				8073BAC51F096B5400BF8C50 /* MatchingDictionary.h */,
+				8073BAC61F096B5400BF8C50 /* MatchingDictionary.m */,
+				8073BAC81F09CEB900BF8C50 /* MatchingDictionaryList.h */,
+				8073BAC91F09CEB900BF8C50 /* MatchingDictionaryList.m */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		8073BAC41F09690500BF8C50 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8073BABE1F0964E800BF8C50 /* PreferencesWindowController.h */,
+				8073BABF1F0964E800BF8C50 /* PreferencesWindowController.m */,
+				8073BAC01F0964E800BF8C50 /* PreferencesWindow.xib */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +199,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8073BAC21F0964E800BF8C50 /* PreferencesWindow.xib in Resources */,
 				8073BAAD1F09540900BF8C50 /* Assets.xcassets in Resources */,
-				8073BAB01F09540900BF8C50 /* Main.storyboard in Resources */,
+				8073BAB81F0954A500BF8C50 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,24 +212,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8073BAAB1F09540900BF8C50 /* ViewController.m in Sources */,
+				8073BAE01F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m in Sources */,
+				8073BAD71F0B633700BF8C50 /* CGKeyboardEvent.m in Sources */,
+				8073BAC71F096B5400BF8C50 /* MatchingDictionary.m in Sources */,
+				8073BACD1F0B5E6200BF8C50 /* KeyboardEventTap.m in Sources */,
+				8073BADA1F0BE1AE00BF8C50 /* CGKeyboardEventTap.m in Sources */,
+				8073BACA1F09CEB900BF8C50 /* MatchingDictionaryList.m in Sources */,
 				8073BAA81F09540900BF8C50 /* main.m in Sources */,
+				8073BAC11F0964E800BF8C50 /* PreferencesWindowController.m in Sources */,
 				8073BAA51F09540900BF8C50 /* AppDelegate.m in Sources */,
+				8073BAD11F0B623F00BF8C50 /* KeyboardEvent.m in Sources */,
+				8073BAD41F0B62F700BF8C50 /* IOHIDKeyboardEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8073BAAE1F09540900BF8C50 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8073BAAF1F09540900BF8C50 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8073BAB21F09540900BF8C50 /* Debug */ = {
@@ -298,6 +361,7 @@
 				8073BAB61F09540900BF8C50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
