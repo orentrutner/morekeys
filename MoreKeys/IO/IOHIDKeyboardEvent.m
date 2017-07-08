@@ -16,10 +16,28 @@
     }
     
     self.result = result;
-    self.device = device;
-    self.value = value;
+    self.device = [[KeyboardDevice alloc] initWithDevice:device];
+    _value = (IOHIDValueRef)CFRetain(value);
     
     return self;
+}
+
+- (void)dealloc {
+    if (_value) {
+        CFRelease(_value);
+    }
+}
+
+- (void)setValue:(IOHIDValueRef)value {
+    if (_value != value) {
+        IOHIDValueRef oldValue = _value;
+        
+        _value = (IOHIDValueRef)CFRetain(value);
+        
+        if (oldValue) {
+            CFRelease(oldValue);
+        }
+    }
 }
 
 @end

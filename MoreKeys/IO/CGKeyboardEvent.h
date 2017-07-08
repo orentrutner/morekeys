@@ -10,9 +10,9 @@
 
 @interface CGKeyboardEvent : NSObject
 
-@property CGEventTapProxy proxy;
-@property CGEventType type;
 @property CGEventRef event;
+@property CGEventType type;
+@property CGEventTapProxy proxy;
 @property void *refcon;
 
 - (instancetype)initWithEvent:(CGEventRef)event type:(CGEventType)type andProxy:(CGEventTapProxy)proxy;

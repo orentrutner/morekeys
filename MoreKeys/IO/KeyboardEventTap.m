@@ -15,7 +15,7 @@
 
 @property CGKeyboardEventTap *cgTap;
 @property IOHIDKeyboardEventTap *hidTap;
-@property IOHIDKeyboardEvent *lastHidEvent;
+@property IOHIDKeyboardEvent *lastHIDEvent;
 
 - (CGEventRef)cgKeyboardEventTap:(CGKeyboardEventTap*)sender
                  didReceiveEvent:(CGKeyboardEvent*)event;
@@ -31,6 +31,8 @@
     if (!(self = [super init])) {
         return nil;
     }
+
+    self.lastHIDEvent = nil;
 
     self.cgTap = [[CGKeyboardEventTap alloc] init];
     self.cgTap.delegate = self;
@@ -55,9 +57,12 @@
                  didReceiveEvent:(CGKeyboardEvent*)event {
 
     if (self.delegate) {
-        return [self.delegate keyboardEventTap:self
-                               didReceiveEvent:[[KeyboardEvent alloc] initWithCgEvent:event
-                                                                          andHidEvent:self.lastHidEvent]];
+        KeyboardEvent *keyboardEvent = [[KeyboardEvent alloc] initWithCgEvent:event
+                                                                  andHidEvent:self.lastHIDEvent];
+        CGEventRef result = [self.delegate keyboardEventTap:self
+                                            didReceiveEvent:keyboardEvent];
+        
+        return result;
     } else {
         return event.event;
     }
@@ -65,7 +70,8 @@
 
 - (void)hidKeyboardEventTap:(IOHIDKeyboardEventTap*)sender
             didReceiveEvent:(IOHIDKeyboardEvent*)event {
-    self.lastHidEvent = event;
+
+    self.lastHIDEvent = event;
 }
 
 @end

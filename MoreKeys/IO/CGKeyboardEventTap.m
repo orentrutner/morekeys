@@ -16,11 +16,12 @@
 @property CFRunLoopSourceRef runLoopSource;
 
 - (CGEventRef)eventWasReceived: (CGEventRef)event ofType:(CGEventType)type andProxy:(CGEventTapProxy)proxy;
++ (BOOL)eventTypeIsKeyboard:(CGEventType)type;
 
 @end
 
 
-CGEventRef callback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon) {
+static CGEventRef callback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon) {
     return [((__bridge CGKeyboardEventTap*)refcon) eventWasReceived:event ofType:type andProxy:proxy];
 }
 
@@ -37,7 +38,7 @@ CGEventRef callback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, v
             kCGHIDEventTap,
             kCGHeadInsertEventTap,
             kCGEventTapOptionDefault,
-            CGEventMaskBit(kCGEventKeyDown) | CGEventMaskBit(kCGEventKeyUp) | CGEventMaskBit(NX_SYSDEFINED),
+            CGEventMaskBit(kCGEventKeyDown) | CGEventMaskBit(kCGEventKeyUp) | CGEventMaskBit(kCGEventFlagsChanged) | CGEventMaskBit(NX_SYSDEFINED),
             callback,
             (__bridge void * _Nullable)self))) {
 
@@ -84,12 +85,18 @@ CGEventRef callback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, v
 }
 
 - (CGEventRef)eventWasReceived: (CGEventRef)event ofType:(CGEventType)type andProxy:(CGEventTapProxy)proxy {
-    return self.delegate
-        ? [self.delegate cgKeyboardEventTap:self
-                            didReceiveEvent:[[CGKeyboardEvent alloc] initWithEvent:event
-                                                                              type:type
-                                                                          andProxy:proxy]]
-        : event;
+    if (self.delegate && [[self class] eventTypeIsKeyboard:type]) {
+        CGKeyboardEvent *cgEvent = [[CGKeyboardEvent alloc] initWithEvent:event
+                                                                     type:type
+                                                                 andProxy:proxy];
+        return [self.delegate cgKeyboardEventTap:self didReceiveEvent:cgEvent];
+    } else {
+        return event;
+    }
+}
+
++ (BOOL)eventTypeIsKeyboard:(CGEventType)type {
+    return type == kCGEventKeyDown || type == kCGEventKeyUp || type == kCGEventFlagsChanged;
 }
 
 @end

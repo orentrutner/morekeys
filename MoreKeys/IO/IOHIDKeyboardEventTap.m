@@ -22,7 +22,7 @@
 @end
 
 
-void callback(void* context,  IOReturn result,  void* sender,  IOHIDValueRef value)
+static void callback(void* context,  IOReturn result,  void* sender,  IOHIDValueRef value)
 {
     [((__bridge IOHIDKeyboardEventTap*)context) eventWasReceivedWithResult:result sender:sender andValue:value];
 }
@@ -41,7 +41,7 @@ void callback(void* context,  IOReturn result,  void* sender,  IOHIDValueRef val
         @{ @kIOHIDDeviceUsagePageKey: @0x01, @kIOHIDDeviceUsageKey: @0x07 }
     ]];
     IOHIDManagerSetDeviceMatchingMultiple(self.hidManager, [matches cfArray]);
-    IOHIDManagerRegisterInputValueCallback(self.hidManager, callback, (__bridge void * _Nullable)(self));
+    IOHIDManagerRegisterInputValueCallback(self.hidManager, callback, (__bridge void * _Nullable)self);
     IOHIDManagerScheduleWithRunLoop(self.hidManager, CFRunLoopGetMain(), kCFRunLoopDefaultMode);
     IOHIDManagerOpen(self.hidManager, kIOHIDOptionsTypeNone);
     
@@ -70,10 +70,10 @@ void callback(void* context,  IOReturn result,  void* sender,  IOHIDValueRef val
                           andValue:(IOHIDValueRef)value {
 
     if (self.delegate) {
-        [self.delegate hidKeyboardEventTap:self
-                           didReceiveEvent:[[IOHIDKeyboardEvent alloc] initWithResult:result
-                                                                               device:sender
-                                                                             andValue:value]];
+        IOHIDKeyboardEvent *hidEvent = [[IOHIDKeyboardEvent alloc] initWithResult:result
+                                                                           device:sender
+                                                                         andValue:value];
+        [self.delegate hidKeyboardEventTap:self didReceiveEvent:hidEvent];
     }
 }
 

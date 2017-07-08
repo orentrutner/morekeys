@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800689C11F0D9328001FE47D /* KeyboardRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 800689C01F0D9328001FE47D /* KeyboardRegistry.m */; };
 		8073BAA51F09540900BF8C50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAA41F09540900BF8C50 /* AppDelegate.m */; };
 		8073BAA81F09540900BF8C50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAA71F09540900BF8C50 /* main.m */; };
 		8073BAAD1F09540900BF8C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8073BAAC1F09540900BF8C50 /* Assets.xcassets */; };
@@ -21,9 +22,13 @@
 		8073BAD71F0B633700BF8C50 /* CGKeyboardEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAD61F0B633700BF8C50 /* CGKeyboardEvent.m */; };
 		8073BADA1F0BE1AE00BF8C50 /* CGKeyboardEventTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAD91F0BE1AE00BF8C50 /* CGKeyboardEventTap.m */; };
 		8073BAE01F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BADF1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m */; };
+		80B4F2701F0D4A100082BA26 /* KeyboardDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B4F26F1F0D4A100082BA26 /* KeyboardDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		800689BF1F0D9328001FE47D /* KeyboardRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardRegistry.h; sourceTree = "<group>"; };
+		800689C01F0D9328001FE47D /* KeyboardRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardRegistry.m; sourceTree = "<group>"; };
+		800689C21F0D9406001FE47D /* KeyboardRegistryDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardRegistryDelegate.h; sourceTree = "<group>"; };
 		8073BAA01F09540900BF8C50 /* MoreKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoreKeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8073BAA31F09540900BF8C50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8073BAA41F09540900BF8C50 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +58,8 @@
 		8073BADE1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDKeyboardEventTap.h; sourceTree = "<group>"; };
 		8073BADF1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOHIDKeyboardEventTap.m; sourceTree = "<group>"; };
 		8073BAE11F0BE7BC00BF8C50 /* IOHIDKeyboardEventTapDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOHIDKeyboardEventTapDelegate.h; sourceTree = "<group>"; };
+		80B4F26E1F0D4A100082BA26 /* KeyboardDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardDevice.h; sourceTree = "<group>"; };
+		80B4F26F1F0D4A100082BA26 /* KeyboardDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardDevice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +134,11 @@
 				8073BAC61F096B5400BF8C50 /* MatchingDictionary.m */,
 				8073BAC81F09CEB900BF8C50 /* MatchingDictionaryList.h */,
 				8073BAC91F09CEB900BF8C50 /* MatchingDictionaryList.m */,
+				80B4F26E1F0D4A100082BA26 /* KeyboardDevice.h */,
+				80B4F26F1F0D4A100082BA26 /* KeyboardDevice.m */,
+				800689BF1F0D9328001FE47D /* KeyboardRegistry.h */,
+				800689C01F0D9328001FE47D /* KeyboardRegistry.m */,
+				800689C21F0D9406001FE47D /* KeyboardRegistryDelegate.h */,
 			);
 			path = IO;
 			sourceTree = "<group>";
@@ -212,10 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B4F2701F0D4A100082BA26 /* KeyboardDevice.m in Sources */,
 				8073BAE01F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m in Sources */,
 				8073BAD71F0B633700BF8C50 /* CGKeyboardEvent.m in Sources */,
 				8073BAC71F096B5400BF8C50 /* MatchingDictionary.m in Sources */,
 				8073BACD1F0B5E6200BF8C50 /* KeyboardEventTap.m in Sources */,
+				800689C11F0D9328001FE47D /* KeyboardRegistry.m in Sources */,
 				8073BADA1F0BE1AE00BF8C50 /* CGKeyboardEventTap.m in Sources */,
 				8073BACA1F09CEB900BF8C50 /* MatchingDictionaryList.m in Sources */,
 				8073BAA81F09540900BF8C50 /* main.m in Sources */,
