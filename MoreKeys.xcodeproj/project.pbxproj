@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		800689C11F0D9328001FE47D /* KeyboardRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 800689C01F0D9328001FE47D /* KeyboardRegistry.m */; };
+		806EDC611F16BA7B00C68251 /* AddDeviceSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806EDC5F1F16BA7B00C68251 /* AddDeviceSheet.xib */; };
 		8073BAA51F09540900BF8C50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAA41F09540900BF8C50 /* AppDelegate.m */; };
 		8073BAA81F09540900BF8C50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAA71F09540900BF8C50 /* main.m */; };
 		8073BAAD1F09540900BF8C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8073BAAC1F09540900BF8C50 /* Assets.xcassets */; };
@@ -23,12 +24,20 @@
 		8073BADA1F0BE1AE00BF8C50 /* CGKeyboardEventTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BAD91F0BE1AE00BF8C50 /* CGKeyboardEventTap.m */; };
 		8073BAE01F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8073BADF1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m */; };
 		80B4F2701F0D4A100082BA26 /* KeyboardDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B4F26F1F0D4A100082BA26 /* KeyboardDevice.m */; };
+		80D844EE1F21A364004207BF /* KeyPressSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D844ED1F21A364004207BF /* KeyPressSpec.m */; };
+		80D844F61F246C2F004207BF /* KeyMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D844F51F246C2F004207BF /* KeyMap.m */; };
+		80D844F91F247048004207BF /* Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D844F81F247048004207BF /* Mapping.m */; };
+		80D844FC1F247BB7004207BF /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D844FB1F247BB7004207BF /* Action.m */; };
+		80D844FF1F247BF4004207BF /* ActionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D844FE1F247BF4004207BF /* ActionContext.m */; };
+		80D845021F24FBA3004207BF /* KeyboardAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D845011F24FBA3004207BF /* KeyboardAction.m */; };
+		80DC5A171F1AE9FD00AEAB2D /* KeyboardMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DC5A161F1AE9FD00AEAB2D /* KeyboardMapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		800689BF1F0D9328001FE47D /* KeyboardRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardRegistry.h; sourceTree = "<group>"; };
 		800689C01F0D9328001FE47D /* KeyboardRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardRegistry.m; sourceTree = "<group>"; };
 		800689C21F0D9406001FE47D /* KeyboardRegistryDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardRegistryDelegate.h; sourceTree = "<group>"; };
+		806EDC5F1F16BA7B00C68251 /* AddDeviceSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddDeviceSheet.xib; sourceTree = "<group>"; };
 		8073BAA01F09540900BF8C50 /* MoreKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoreKeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8073BAA31F09540900BF8C50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8073BAA41F09540900BF8C50 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +69,20 @@
 		8073BAE11F0BE7BC00BF8C50 /* IOHIDKeyboardEventTapDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOHIDKeyboardEventTapDelegate.h; sourceTree = "<group>"; };
 		80B4F26E1F0D4A100082BA26 /* KeyboardDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardDevice.h; sourceTree = "<group>"; };
 		80B4F26F1F0D4A100082BA26 /* KeyboardDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardDevice.m; sourceTree = "<group>"; };
+		80D844EC1F21A364004207BF /* KeyPressSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyPressSpec.h; sourceTree = "<group>"; };
+		80D844ED1F21A364004207BF /* KeyPressSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyPressSpec.m; sourceTree = "<group>"; };
+		80D844F41F246C2F004207BF /* KeyMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyMap.h; sourceTree = "<group>"; };
+		80D844F51F246C2F004207BF /* KeyMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyMap.m; sourceTree = "<group>"; };
+		80D844F71F247048004207BF /* Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mapping.h; sourceTree = "<group>"; };
+		80D844F81F247048004207BF /* Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mapping.m; sourceTree = "<group>"; };
+		80D844FA1F247BB7004207BF /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
+		80D844FB1F247BB7004207BF /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
+		80D844FD1F247BF4004207BF /* ActionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionContext.h; sourceTree = "<group>"; };
+		80D844FE1F247BF4004207BF /* ActionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionContext.m; sourceTree = "<group>"; };
+		80D845001F24FBA3004207BF /* KeyboardAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardAction.h; sourceTree = "<group>"; };
+		80D845011F24FBA3004207BF /* KeyboardAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardAction.m; sourceTree = "<group>"; };
+		80DC5A151F1AE9FD00AEAB2D /* KeyboardMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardMapper.h; sourceTree = "<group>"; };
+		80DC5A161F1AE9FD00AEAB2D /* KeyboardMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardMapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +115,7 @@
 		8073BAA21F09540900BF8C50 /* MoreKeys */ = {
 			isa = PBXGroup;
 			children = (
+				80DC5A141F1AE87600AEAB2D /* Mapper */,
 				8073BAC41F09690500BF8C50 /* UI */,
 				8073BAC31F0968FA00BF8C50 /* IO */,
 				8073BAA31F09540900BF8C50 /* AppDelegate.h */,
@@ -115,16 +139,8 @@
 		8073BAC31F0968FA00BF8C50 /* IO */ = {
 			isa = PBXGroup;
 			children = (
-				8073BAD51F0B633700BF8C50 /* CGKeyboardEvent.h */,
-				8073BAD61F0B633700BF8C50 /* CGKeyboardEvent.m */,
-				8073BAD81F0BE1AE00BF8C50 /* CGKeyboardEventTap.h */,
-				8073BAD91F0BE1AE00BF8C50 /* CGKeyboardEventTap.m */,
-				8073BADB1F0BE1F300BF8C50 /* CGKeyboardEventTapDelegate.h */,
-				8073BAD21F0B62F700BF8C50 /* IOHIDKeyboardEvent.h */,
-				8073BAD31F0B62F700BF8C50 /* IOHIDKeyboardEvent.m */,
-				8073BADE1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.h */,
-				8073BADF1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m */,
-				8073BAE11F0BE7BC00BF8C50 /* IOHIDKeyboardEventTapDelegate.h */,
+				80D844F21F24687E004207BF /* CG */,
+				80D844F31F246941004207BF /* IOHID */,
 				8073BACF1F0B623F00BF8C50 /* KeyboardEvent.h */,
 				8073BAD01F0B623F00BF8C50 /* KeyboardEvent.m */,
 				8073BACB1F0B5E6200BF8C50 /* KeyboardEventTap.h */,
@@ -149,8 +165,54 @@
 				8073BABE1F0964E800BF8C50 /* PreferencesWindowController.h */,
 				8073BABF1F0964E800BF8C50 /* PreferencesWindowController.m */,
 				8073BAC01F0964E800BF8C50 /* PreferencesWindow.xib */,
+				806EDC5F1F16BA7B00C68251 /* AddDeviceSheet.xib */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		80D844F21F24687E004207BF /* CG */ = {
+			isa = PBXGroup;
+			children = (
+				8073BAD51F0B633700BF8C50 /* CGKeyboardEvent.h */,
+				8073BAD61F0B633700BF8C50 /* CGKeyboardEvent.m */,
+				8073BAD81F0BE1AE00BF8C50 /* CGKeyboardEventTap.h */,
+				8073BAD91F0BE1AE00BF8C50 /* CGKeyboardEventTap.m */,
+				8073BADB1F0BE1F300BF8C50 /* CGKeyboardEventTapDelegate.h */,
+			);
+			path = CG;
+			sourceTree = "<group>";
+		};
+		80D844F31F246941004207BF /* IOHID */ = {
+			isa = PBXGroup;
+			children = (
+				8073BAD21F0B62F700BF8C50 /* IOHIDKeyboardEvent.h */,
+				8073BAD31F0B62F700BF8C50 /* IOHIDKeyboardEvent.m */,
+				8073BADE1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.h */,
+				8073BADF1F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m */,
+				8073BAE11F0BE7BC00BF8C50 /* IOHIDKeyboardEventTapDelegate.h */,
+			);
+			path = IOHID;
+			sourceTree = "<group>";
+		};
+		80DC5A141F1AE87600AEAB2D /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				80DC5A151F1AE9FD00AEAB2D /* KeyboardMapper.h */,
+				80DC5A161F1AE9FD00AEAB2D /* KeyboardMapper.m */,
+				80D844EC1F21A364004207BF /* KeyPressSpec.h */,
+				80D844ED1F21A364004207BF /* KeyPressSpec.m */,
+				80D844F41F246C2F004207BF /* KeyMap.h */,
+				80D844F51F246C2F004207BF /* KeyMap.m */,
+				80D844F71F247048004207BF /* Mapping.h */,
+				80D844F81F247048004207BF /* Mapping.m */,
+				80D844FA1F247BB7004207BF /* Action.h */,
+				80D844FB1F247BB7004207BF /* Action.m */,
+				80D844FD1F247BF4004207BF /* ActionContext.h */,
+				80D844FE1F247BF4004207BF /* ActionContext.m */,
+				80D845001F24FBA3004207BF /* KeyboardAction.h */,
+				80D845011F24FBA3004207BF /* KeyboardAction.m */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +276,7 @@
 				8073BAC21F0964E800BF8C50 /* PreferencesWindow.xib in Resources */,
 				8073BAAD1F09540900BF8C50 /* Assets.xcassets in Resources */,
 				8073BAB81F0954A500BF8C50 /* MainMenu.xib in Resources */,
+				806EDC611F16BA7B00C68251 /* AddDeviceSheet.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,15 +289,22 @@
 			files = (
 				80B4F2701F0D4A100082BA26 /* KeyboardDevice.m in Sources */,
 				8073BAE01F0BE78E00BF8C50 /* IOHIDKeyboardEventTap.m in Sources */,
+				80D845021F24FBA3004207BF /* KeyboardAction.m in Sources */,
 				8073BAD71F0B633700BF8C50 /* CGKeyboardEvent.m in Sources */,
 				8073BAC71F096B5400BF8C50 /* MatchingDictionary.m in Sources */,
 				8073BACD1F0B5E6200BF8C50 /* KeyboardEventTap.m in Sources */,
+				80D844F91F247048004207BF /* Mapping.m in Sources */,
+				80D844FF1F247BF4004207BF /* ActionContext.m in Sources */,
 				800689C11F0D9328001FE47D /* KeyboardRegistry.m in Sources */,
 				8073BADA1F0BE1AE00BF8C50 /* CGKeyboardEventTap.m in Sources */,
 				8073BACA1F09CEB900BF8C50 /* MatchingDictionaryList.m in Sources */,
 				8073BAA81F09540900BF8C50 /* main.m in Sources */,
+				80DC5A171F1AE9FD00AEAB2D /* KeyboardMapper.m in Sources */,
+				80D844F61F246C2F004207BF /* KeyMap.m in Sources */,
 				8073BAC11F0964E800BF8C50 /* PreferencesWindowController.m in Sources */,
+				80D844EE1F21A364004207BF /* KeyPressSpec.m in Sources */,
 				8073BAA51F09540900BF8C50 /* AppDelegate.m in Sources */,
+				80D844FC1F247BB7004207BF /* Action.m in Sources */,
 				8073BAD11F0B623F00BF8C50 /* KeyboardEvent.m in Sources */,
 				8073BAD41F0B62F700BF8C50 /* IOHIDKeyboardEvent.m in Sources */,
 			);

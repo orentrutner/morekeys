@@ -14,6 +14,7 @@
 @protocol CGKeyboardEventTapDelegate
 
 - (CGEventRef)cgKeyboardEventTap:(CGKeyboardEventTap*)sender
-                 didReceiveEvent:(CGKeyboardEvent*)event;
+                 didReceiveEvent:(CGKeyboardEvent*)event
+                       withProxy:(CGEventTapProxy)proxy;
 
 @end

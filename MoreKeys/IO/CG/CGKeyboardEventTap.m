@@ -84,12 +84,15 @@ static CGEventRef callback(CGEventTapProxy proxy, CGEventType type, CGEventRef e
     CGEventTapEnable(self.eventTap, false);
 }
 
-- (CGEventRef)eventWasReceived: (CGEventRef)event ofType:(CGEventType)type andProxy:(CGEventTapProxy)proxy {
+- (CGEventRef)eventWasReceived: (CGEventRef)event
+                        ofType:(CGEventType)type
+                      andProxy:(CGEventTapProxy)proxy {
+
     if (self.delegate && [[self class] eventTypeIsKeyboard:type]) {
-        CGKeyboardEvent *cgEvent = [[CGKeyboardEvent alloc] initWithEvent:event
-                                                                     type:type
-                                                                 andProxy:proxy];
-        return [self.delegate cgKeyboardEventTap:self didReceiveEvent:cgEvent];
+        CGKeyboardEvent *cgEvent = [[CGKeyboardEvent alloc] initWithEvent:event];
+        return [self.delegate cgKeyboardEventTap:self
+                                 didReceiveEvent:cgEvent
+                                       withProxy:proxy];
     } else {
         return event;
     }

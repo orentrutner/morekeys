@@ -36,6 +36,16 @@
     }
 }
 
+- (BOOL)isEqual:(id)object {
+    return !!object
+        && [object isKindOfClass:[KeyboardDevice class]]
+        && [object uniqueId] == self.uniqueId;
+}
+
+- (NSUInteger)hash {
+    return self.uniqueId;
+}
+
 - (void)setDevice:(IOHIDDeviceRef)device {
     if (_device != device) {
         IOHIDDeviceRef oldValue = _device;

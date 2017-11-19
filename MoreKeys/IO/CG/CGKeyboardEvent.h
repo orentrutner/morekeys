@@ -11,10 +11,12 @@
 @interface CGKeyboardEvent : NSObject
 
 @property CGEventRef event;
-@property CGEventType type;
-@property CGEventTapProxy proxy;
-@property void *refcon;
 
-- (instancetype)initWithEvent:(CGEventRef)event type:(CGEventType)type andProxy:(CGEventTapProxy)proxy;
+- (instancetype)initWithEvent:(CGEventRef)event;
+- (instancetype)initWithVirtualKey:(CGKeyCode)virtualKey
+                              type:(CGEventType)type
+                          andFlags:(CGEventFlags)flags;
+
+- (CGEventType)type;
 
 @end

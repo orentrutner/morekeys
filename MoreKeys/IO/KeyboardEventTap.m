@@ -6,9 +6,9 @@
 //  Copyright © 2017 Factual Composites. All rights reserved.
 //
 
+#import "CG/CGKeyboardEventTap.h"
+#import "IOHID/IOHIDKeyboardEventTap.h"
 #import "KeyboardEventTap.h"
-#import "CGKeyboardEventTap.h"
-#import "IOHIDKeyboardEventTap.h"
 
 
 @interface KeyboardEventTap ()
@@ -18,7 +18,8 @@
 @property IOHIDKeyboardEvent *lastHIDEvent;
 
 - (CGEventRef)cgKeyboardEventTap:(CGKeyboardEventTap*)sender
-                 didReceiveEvent:(CGKeyboardEvent*)event;
+                 didReceiveEvent:(CGKeyboardEvent*)event
+                       withProxy:(CGEventTapProxy)proxy;
 - (void)hidKeyboardEventTap:(IOHIDKeyboardEventTap*)sender
             didReceiveEvent:(IOHIDKeyboardEvent*)event;
 
@@ -53,12 +54,15 @@
     [self.hidTap stop];
 }
 
+// Event handler for the CG keyboard tap
 - (CGEventRef)cgKeyboardEventTap:(CGKeyboardEventTap*)sender
-                 didReceiveEvent:(CGKeyboardEvent*)event {
+                 didReceiveEvent:(CGKeyboardEvent*)event
+                       withProxy:(CGEventTapProxy)proxy {
 
     if (self.delegate) {
         KeyboardEvent *keyboardEvent = [[KeyboardEvent alloc] initWithCgEvent:event
-                                                                  andHidEvent:self.lastHIDEvent];
+                                                                     hidEvent:self.lastHIDEvent
+                                                                     andProxy:proxy];
         CGEventRef result = [self.delegate keyboardEventTap:self
                                             didReceiveEvent:keyboardEvent];
         
@@ -68,6 +72,7 @@
     }
 }
 
+// Event handler for the HID keyboard tap
 - (void)hidKeyboardEventTap:(IOHIDKeyboardEventTap*)sender
             didReceiveEvent:(IOHIDKeyboardEvent*)event {
 

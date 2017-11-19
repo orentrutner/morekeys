@@ -7,17 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CGKeyboardEvent.h"
-#import "IOHIDKeyboardEvent.h"
+#import "CG/CGKeyboardEvent.h"
+#import "IOHID/IOHIDKeyboardEvent.h"
 #import "KeyboardDevice.h"
 
 @interface KeyboardEvent : NSObject
 
 @property CGKeyboardEvent *cgEvent;
 @property IOHIDKeyboardEvent *hidEvent;
+@property CGEventTapProxy proxy;
 
 - (instancetype)initWithCgEvent:(CGKeyboardEvent*)cgEvent
-                    andHidEvent:(IOHIDKeyboardEvent*)hidEvent;
+                       hidEvent:(IOHIDKeyboardEvent*)hidEvent
+                       andProxy:(CGEventTapProxy)proxy;
 
 - (CGEventTimestamp)timestamp;
 - (KeyboardDevice*)device;

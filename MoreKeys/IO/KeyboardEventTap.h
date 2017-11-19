@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CG/CGKeyboardEventTapDelegate.h"
+#import "IOHID/IOHIDKeyboardEventTapDelegate.h"
 #import "KeyboardEventTapDelegate.h"
-#import "CGKeyboardEventTapDelegate.h"
-#import "IOHIDKeyboardEventTapDelegate.h"
 
 @interface KeyboardEventTap : NSObject <CGKeyboardEventTapDelegate, IOHIDKeyboardEventTapDelegate>
 

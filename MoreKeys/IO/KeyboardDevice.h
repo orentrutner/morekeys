@@ -16,6 +16,9 @@
 - (instancetype)initWithDevice:(IOHIDDeviceRef)device;
 - (void)dealloc;
 
+- (BOOL)isEqual:(id)object;
+- (NSUInteger)hash;
+
 - (int32_t)countryCode;
 - (NSString*)manufacturer;
 - (int32_t)primaryUsage;

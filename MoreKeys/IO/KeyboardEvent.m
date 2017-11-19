@@ -21,7 +21,8 @@
 @implementation KeyboardEvent
 
 - (instancetype)initWithCgEvent:(CGKeyboardEvent*)cgEvent
-                    andHidEvent:(IOHIDKeyboardEvent*)hidEvent {
+                       hidEvent:(IOHIDKeyboardEvent*)hidEvent
+                       andProxy:(CGEventTapProxy)proxy {
     
     if (!(self = [super init])) {
         return nil;
@@ -29,6 +30,7 @@
 
     self.cgEvent = cgEvent;
     self.hidEvent = hidEvent;
+    self.proxy = proxy;
 
     return self;
 }
