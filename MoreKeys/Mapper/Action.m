@@ -10,4 +10,7 @@
 
 @implementation Action
 
+- (void)applyInContext:(ActionContext*)context {
+}
+
 @end
